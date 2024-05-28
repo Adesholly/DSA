@@ -14,9 +14,9 @@ int main (){
 
     bubbleSort(numbers, size);
 
-    for (int element : numbers){
+    for (int i = 0; i < size; i++){
 
-        std::cout << element << " ";
+        std::cout << numbers[i] << " ";
     }
 
     std::cout << "\n";

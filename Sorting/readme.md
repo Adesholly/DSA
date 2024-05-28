@@ -21,8 +21,41 @@ Bubble Sort is a simple comparison-based algorithm where each pair of adjacent e
     end BubbleSort
 
     Big O, Theta & 
+
     Best Case: O(n) (already sorted)
     Average Case: O(n^2)
     Worst Case: O(n^2)
+
+
+2. Selection sort
+
+Selection sort divide the input list two parts: a sorted sublist of items that is built up from left to right and a sublist of the remaining unsorted items. It repeatedly selects the smallest (or largest) element from the unsorted sublist, swapping it with the leftmost unsorted element , and moving the sublist boundaries one element to the right. 
+
+
+    Pseudocode
+
+    SelectionSort(A)
+
+        n = length(A)
+        for i = 0 to n-1 do
+            minIndex = i
+
+            for j = i+1 to n-1 do
+                if A[j] < A[minIndex] then
+
+                    minIndex = j
+
+                end  if
+            end for
+            swap A[i] and A[minIndex]
+        end for
+    end SelectionSort
+
+    Big O, Theta &
+
+    Best Case: O(n^2)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+
 
 
