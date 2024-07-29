@@ -35,20 +35,19 @@ Selection sort divide the input list two parts: a sorted sublist of items that i
     Pseudocode
 
     SelectionSort(A)
+    n = length(A)
+    for i = 0 to n-1 do
+        minIndex = i
 
-        n = length(A)
-        for i = 0 to n-1 do
-            minIndex = i
+        for j = i+1 to n-1 do
+            if A[j] < A[minIndex] then
 
-            for j = i+1 to n-1 do
-                if A[j] < A[minIndex] then
+                minIndex = j
 
-                    minIndex = j
-
-                end  if
-            end for
-            swap A[i] and A[minIndex]
+            end  if
         end for
+        swap A[i] and A[minIndex]
+    end for
     end SelectionSort
 
     Big O, Theta &
@@ -57,5 +56,33 @@ Selection sort divide the input list two parts: a sorted sublist of items that i
     Average Case: O(n^2)
     Worst Case: O(n^2)
 
+ 3. Insertion Sort 
+
+    Insertion Sort builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms, quicksort, heapsort, or merge sort. It works by taking an element from the list and inserting it into the correct position in the sorted part of the list, shifting the other elements as necessary.
+
+
+    Pseudocode
+
+    InsertionSort(A)
+    n =  length(A)
+    for i = 0 to n-1 do
+        key = A[i]
+        j = i - 1
+
+        while j >= 0 and A[j] > key do
+        A[j + 1] = A[j]
+        j = j - 1
+        end while
+
+        A[j + 1] = key
+    end for
+    end InsertionSort
+
+
+    Big O, Theta &
+
+    Best Case: O(n) (already sorted)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
 
 
