@@ -12,7 +12,7 @@ function sortedSquaredArray (array: number[]): number[] {
     }
 
 
-    return newArray.sort((a, b) => a - b)
+    return newArray.sort((a, b) => a - b) //incase negative value
 }
 
 
@@ -43,3 +43,7 @@ function _sortedSquaredArray (array : number[]): number[] {
 
 }
 
+
+// Test Cases
+console.log(sortedSquaredArray([-12,-1,0,1,3,4,6]))
+console.log(_sortedSquaredArray([-12,-1,0,1,3,4,6]))

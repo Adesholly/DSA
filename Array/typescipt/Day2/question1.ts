@@ -1,7 +1,7 @@
 // Recursive
 function kgram(n: number, k: number): number {
 
-    if(n === 1) return 0
+    if(n == 1) return 0
 
     let length = Math.pow(2, n-1)
     let mid = length / 2
@@ -29,3 +29,4 @@ function kgramI(n: number, k: number): number {
 
 // Test Cases
 console.log(kgram(3, 4)) // 1
+console.log(kgramI(3, 4)) // 1

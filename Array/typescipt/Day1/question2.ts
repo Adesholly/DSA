@@ -32,5 +32,10 @@ function isMonotonic (array: number[]): boolean {
     
     return true  
 
-    
 }
+
+
+// Test case
+
+console.log(isMonotonic([1,2,3,5,4,4,4])) // false
+console.log(isMonotonic([1,2,3,4,4,4,5])) // true
